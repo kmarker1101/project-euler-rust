@@ -1,4 +1,5 @@
 mod math;
+use primes::{PrimeSet, Sieve};
 
 fn euler_one(num: u32) -> u32 {
     // Solves Project Euler 1
@@ -47,4 +48,19 @@ fn main() {
     println!("The solution to Euler 1 is {}", euler_one(1000));
     println!("The solution to Euler 2 is {}", euler_two(4000000));
     println!("The solution to Euler 6 is {}", euler_six(101));
+
+    let mut pset = Sieve::new();
+    let mut vec = Vec::new();
+    let mut sum = 0;
+
+    for (_, n) in pset.iter().enumerate().take(1000) {
+        vec.push(n);
+        // println!("Prime {}: {}", ix, n);
+        // println!("{}", n);
+    }
+
+    for x in &vec {
+        sum += x;
+    }
+    println!("{}", sum);
 }
