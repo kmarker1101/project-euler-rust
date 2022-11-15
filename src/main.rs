@@ -14,6 +14,7 @@ fn euler_one(num: u32) -> u32 {
 }
 
 fn euler_two(num: i128) -> i128 {
+    // Solvers Project Euler 2
     let mut count = 1;
     let mut fib = 0;
     let mut total = 0;
